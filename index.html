@@ -4,31 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Journal de Robotique</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Polices Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- CSS personnalisé -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mon Journal de Robotique</h1>
-        <p>Un recueil de mes projets réalisés pendant mes études en robotique</p>
-    </header>
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <div class="projet">
-            <h3>Projet 1 : Robot Autonome (en cours)</h3>
-            <p>Date : Septembre 2024</p>
-            <p>Un robot autonome que je développe avec Arduino. Il utilise des capteurs à ultrasons pour naviguer dans un labyrinthe. Plus de détails à venir une fois terminé !</p>
-            <img src="https://via.placeholder.com/300x200" alt="Robot Autonome">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mon Journal de Robotique</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journal">Journal</a></li>
+                    <li class="nav-item"><a class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><button id="theme-toggle" class="btn btn-outline-light">Mode Sombre</button></li>
+                </ul>
+            </div>
         </div>
-        <div class="projet">
-            <h3>Projet 2 : Bras Robotique (en cours)</h3>
-            <p>Date : Janvier 2025</p>
-            <p>Un bras robotique contrôlé par Raspberry Pi. Ce projet est en phase de conception, avec des servomoteurs pour manipuler des objets légers.</p>
-            <img src="https://via.placeholder.com/300x200" alt="Bras Robotique">
+    </nav>
+
+    <!-- À propos -->
+    <section id="apropos" class="container my-5">
+        <h2 class="display-4">À propos de moi</h2>
+        <p class="lead">Je m'appelle Lloyd, étudiant passionné par la robotique. Ce portfolio est mon journal personnel où je documente mes projets, mes défis et mes découvertes en robotique. Chaque projet est une étape dans mon apprentissage !</p>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="container my-5">
+        <h2 class="display-4">Mes Projets</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Robot Autonome">
+                    <div class="card-body">
+                        <h3 class="card-title">Projet 1 : Robot Autonome</h3>
+                        <p class="card-text"><strong>Date :</strong> Septembre 2024</p>
+                        <p class="card-text">Un robot autonome construit avec Arduino, utilisant des capteurs à ultrasons pour naviguer dans un labyrinthe.</p>
+                        <p class="card-text"><strong>Réflexion :</strong> Déboguer les capteurs m’a appris la patience et l’importance des tests rigoureux.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Bras Robotique">
+                    <div class="card-body">
+                        <h3 class="card-title">Projet 2 : Bras Robotique</h3>
+                        <p class="card-text"><strong>Date :</strong> Janvier 2025</p>
+                        <p class="card-text">Un bras robotique contrôlé par Raspberry Pi pour manipuler des objets légers.</p>
+                        <p class="card-text"><strong>Réflexion :</strong> Les servomoteurs sont un défi, mais chaque progrès est gratifiant.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <footer>
+
+    <!-- Journal -->
+    <section id="journal" class="container my-5">
+        <h2 class="display-4">Mon Journal</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">15 octobre 2024 : Première idée</h3>
+                        <p class="card-text">J’ai commencé à esquisser mon robot autonome. Arduino est un outil incroyable, mais je dois apprendre à gérer les capteurs !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">1er novembre 2024 : Premier bug</h3>
+                        <p class="card-text">Mon robot tournait en rond à cause d’un capteur mal calibré. J’ai appris à vérifier les connexions avant de modifier le code.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container my-5">
+        <h2 class="display-4">Contactez-moi</h2>
+        <form name="contact" method="POST" data-netlify="true" class="card p-4">
+            <input type="hidden" name="form-name" value="contact">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" name="name" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>Contact : francois.mclloyd.01@gmail.com</p>
+        <p>© 2025 Lloyd Ht. Tous droits réservés.</p>
     </footer>
+
+    <!-- Bootstrap JS et Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Script personnalisé -->
     <script src="script.js"></script>
 </body>
 </html>

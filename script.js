@@ -1,11 +1,19 @@
-// Ajoute une petite animation au chargement
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Portfolio de robotique chargé !");
-    const projets = document.querySelectorAll(".projet");
-    projets.forEach((projet, index) => {
+
+    // Animation pour les cartes
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, index) => {
         setTimeout(() => {
-            projet.style.opacity = "1";
-            projet.style.transform = "translateY(0)";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
         }, index * 200);
+    });
+
+    // Gestion du mode sombre
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggleButton.textContent = document.body.classList.contains("dark-mode") ? "Mode Clair" : "Mode Sombre";
     });
 });
